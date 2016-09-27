@@ -1,11 +1,12 @@
 CC := icc
 C_FLAGS := -O3
-OFFLOAD_FLAGS := -qoffload-mic
+OFFLOAD_FLAGS := -qoffload=mandatory -qoffload-attribute-target=mic
 INCLUDE_PATHS := 
 
 LIBXEONPHI_SHARED_O := libxeonphi.so
 LIBXEONPHI_OBJECTS := \
     core.o
+    #test.o
 
 .PHONY: all
 
